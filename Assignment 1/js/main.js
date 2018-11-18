@@ -1,53 +1,65 @@
-function createDiv(){
+var div = document.createElement('div');
 
-	var theDiv = document.createElement('div');
-	theDiv.className = "div1";
-	theDiv.id = 'div01';
-	theDiv.setAttribute('title', 'holder');
+div.className = 'theDiv';
 
-	var selector = document.createElement('select');
+div.id = 'hello1';
 
-	var optionList = [];
+div.setAttribute('title', 'Hello')
 
-	for(var i = 1; i <= 10; i++)
-	{
-		var option = document.createElement('option');
-		option.id = i;
-		optionList.push(option);
-	}
+var divText = document.createTextNode("Select a Number ");
 
-	optionList[0].textContent = "1";
-	optionList[1].textContent = "2";
-	optionList[2].textContent = "3";
-	optionList[3].textContent = "4";
-	optionList[4].textContent = "5";
-	optionList[5].textContent = "6";
-	optionList[6].textContent = "7";
-	optionList[7].textContent = "8";
-	optionList[8].textContent = "9";
-	optionList[9].textContent = "10";
+div.appendChild(divText);
 
-	optionList.forEach(function(option)
-	{
-		selector.appendChild(option);
-	})
-	
-	selector.onchange = displayAnimal();
 
-	theDiv.appendChild(selector);
 
-	var container = document.querySelector('header .leftContainer');
-	var p = document.querySelector('header p');
 
-	container.insertBefore(theDiv, p);
 
-	
-}
 
-function displayAnimal()
-{
-	alert("hello");
-}
+	var select = document.createElement('select');
+	select.onchange = alert("1");
+
+
+
+		select.appendChild(new Option("1"));
+		select.appendChild(new Option("2"));
+		select.appendChild(new Option("3"));
+		select.appendChild(new Option("4"));
+		select.appendChild(new Option("5"));
+		select.appendChild(new Option("6"));
+		select.appendChild(new Option("7"));
+		select.appendChild(new Option("8"));
+		select.appendChild(new Option("9"));
+		select.appendChild(new Option("10"));
+
+
+
+
+
+	div.appendChild(select);
+
+
+
+
+
+
+
+
+
+
+document.body.appendChild(div);
+
+console.log(div);
+
+
+
+
+
+
+
+
+
+
+
 
 function Animal(name, description){
 	this.name = name;
