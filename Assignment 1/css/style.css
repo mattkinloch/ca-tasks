@@ -1,0 +1,15 @@
+.lDivText{
+	float:left;
+	width:30%;
+	padding:15px;
+	box-sizing: border-box;
+}
+
+.rDivText{
+	float:right;
+	width:70%;
+	background-color: #333333;
+	color:#fff;
+	padding:15px;
+	box-sizing: border-box;
+}
