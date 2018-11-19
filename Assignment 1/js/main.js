@@ -1,65 +1,40 @@
-var div = document.createElement('div');
+function createDiv()
+{
+	var div = document.createElement('div');
+	div.className = 'main-div';
+	div.id = 'mainDiv';
+	div.setAttribute('title', 'Main Div');
+	var divText = document.createTextNode("Select a Number ");
+	div.appendChild(divText);
 
-div.className = 'theDiv';
+		var select = document.createElement('select')
 
-div.id = 'hello1';
+			for(var i = 0; i < 10; i++)
+			{
+				select.options[i] = new Option("" + (i + 1));
+			}
 
-div.setAttribute('title', 'Hello')
+			/*
+			select.options[0] = new Option("1");
+			select.options[1] = new Option("2");
+			select.options[2] = new Option("3");
+			select.options[3] = new Option("4");
+			select.options[4] = new Option("5");
+			select.options[5] = new Option("6");
+			select.options[6] = new Option("7");
+			select.options[7] = new Option("8");
+			select.options[8] = new Option("9");
+			select.options[9] = new Option("10");
+			*/
 
-var divText = document.createTextNode("Select a Number ");
-
-div.appendChild(divText);
-
-
-
-
-
-
-	var select = document.createElement('select');
-	select.onchange = alert("1");
-
-
-
-		select.appendChild(new Option("1"));
-		select.appendChild(new Option("2"));
-		select.appendChild(new Option("3"));
-		select.appendChild(new Option("4"));
-		select.appendChild(new Option("5"));
-		select.appendChild(new Option("6"));
-		select.appendChild(new Option("7"));
-		select.appendChild(new Option("8"));
-		select.appendChild(new Option("9"));
-		select.appendChild(new Option("10"));
-
-
+		select.addEventListener("change", function() {alert("changed to "+select.value)});
+		
+		div.appendChild(select);
 
 
-
-	div.appendChild(select);
-
-
-
-
-
-
-
-
-
-
-document.body.appendChild(div);
-
-console.log(div);
-
-
-
-
-
-
-
-
-
-
-
+	document.body.appendChild(div);
+	console.log(div);
+}
 
 function Animal(name, description){
 	this.name = name;
