@@ -1,15 +1,22 @@
-.lDivText{
+body{
+	background-color:#f4f4f4;
+	color:black;
+	text-align: center;
+	margin:100px;
+}
+
+#theLeftDiv{
 	float:left;
 	width:30%;
-	padding:15px;
+	padding:30px;
 	box-sizing: border-box;
 }
 
-.rDivText{
+#theRightDiv{
 	float:right;
 	width:70%;
 	background-color: #333333;
 	color:#fff;
-	padding:15px;
+	padding:30px;
 	box-sizing: border-box;
 }
