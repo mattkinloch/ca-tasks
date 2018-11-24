@@ -42,7 +42,7 @@ function createDiv()
 		var index = parseInt(select.options[select.selectedIndex].textContent) - 1;
 
 		// Append the information about the chosen animal to the right div
-		rightDivText = document.createTextNode("Name: " + animalList[index].name + " Description: " + animalList[index].description);
+		rightDivText = document.createTextNode(animalList[index].describe());
 		rightDiv.appendChild(rightDivText);
 
 	});
@@ -77,8 +77,8 @@ function readDatabase()
 		console.log(data);
 		for(var i=0; i<data.length; i++)
 		{
-			animalList[i] = data[i];
-			console.log(animalList[i]);
+			newA = new Animal(data[i].name, data[i].description);
+			animalList[i] = newA;
 		}
 	})
 }
